@@ -1,0 +1,47 @@
+.clbtn{
+	@include outline(0);
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	font-family: $global-font-family;
+	font-size: 16px;
+	font-weight: 600;
+	min-width: 167px;
+	border-radius: 5px;
+	padding: 12px 20px;    
+	border: 1px solid #2081e2;    
+	text-decoration: none;
+	transition: all 0.2s ease 0s;
+	cursor: pointer;
+	&:hover{
+		box-shadow: rgba(4, 17, 29, 0.25) 0px 0px 8px 0px;
+	}
+	&-main{
+		background-color: #2081e2;
+		color: #fff;
+		&:hover{
+			background-color: #1868b7;
+		}
+	}
+	&-secondary{
+		background-color: #fff;
+		color: #2081e2;
+		&:hover{
+			color: #1868b7;
+		}
+	}	
+}
+.get-feat-btn{
+	@include outline(0);
+	border: none;
+	padding: 0;
+	background-color: transparent;
+	font-size: 16px;
+	color: #2081e2;
+	font-weight: 600;
+	transition: all 0.2s ease 0s;
+	cursor: pointer;
+	&:hover{
+		color: #1868b7;
+	}
+}

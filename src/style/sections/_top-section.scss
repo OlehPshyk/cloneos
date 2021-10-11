@@ -1,0 +1,138 @@
+.top-section{	
+	position: relative;
+	&:before{
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background-size: cover;
+    background-color: rgb(255, 255, 255);
+    background-position: center center;
+    opacity: 0.3;
+    filter: blur(8px);
+    -webkit-mask: linear-gradient(rgb(255, 255, 255), transparent);
+		background-image: url('/src/static/img/top-bg.jpg');
+		pointer-events: none;
+	}
+	.top-section-container{
+		height: 586px;
+		padding: 40px $pad-x;
+		position: relative;
+    z-index: 1;
+		@include breakpoint(xl){
+			display: flex;
+		}		
+	}
+	.text-part{
+		@include breakpoint(xl){
+			padding: 70px 20px 0px 30px;
+			flex: 1 1 auto;
+			width: 45%;
+			display: flex;
+			flex-direction: column;
+		}
+		.title{
+			font-size: 45px;
+			line-height: 1.1;
+			font-weight: 600;
+			color: $global-text-color;
+			margin-bottom: 20px;
+		}
+		.text{
+			font-size: 24px;
+			line-height: 1.5;
+			max-width: 320px;
+			color: #353840;
+			margin: 0 0 40px;
+		}
+		.btns-container{
+			display: flex;
+			align-items: center;
+			margin-bottom: 20px;
+			.clbtn{
+				&:not(:last-child){
+					margin-right: 20px;
+				}
+			}
+		}
+		.feat-container{
+			flex: 1 1 auto;
+			display: flex;
+    	align-items: flex-end;			
+		}
+	}
+	.image-part{
+		@include breakpoint(xl){
+			flex: 1 1 auto;
+			width: 55%;
+			display: flex;
+    	justify-content: flex-end;
+			align-items: flex-start;
+		}
+	}
+	.top-card{
+		max-width: 550px;
+		margin-right: 30px;
+		width: 100%;
+    background-color: rgb(251, 253, 255);
+		display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+		overflow: hidden;
+		box-shadow: rgba(4, 17, 29, 0.25) 0px 0px 10px 0px;
+		text-decoration: none;
+		transition: box-shadow 0.3s ease-in 0s;
+		&:hover{
+    	box-shadow: rgba(4, 17, 29, 0.25) 0px 0px 50px 0px;
+		}
+	}
+	.card-img-container{
+		border-bottom: 1px solid #e5e8eb;
+		height: 300px;
+		@include breakpoint(xl){
+			height: 420px;
+		}
+		.card-img{
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: 50% 50%;
+		}
+	}
+	.card-footer{
+		padding: 16px;
+		display: flex;
+		align-items: center;
+		.card-img-box{
+			overflow: hidden;
+			border: 1px solid rgb(229, 232, 235);
+			border-radius: 50%;
+			width: 40px;
+			height: 40px;
+			margin-right: 16px;
+			.img{
+				width: 100%;
+				height: 100%;
+				object-fit: contain;
+				object-position: 50% 50%;
+			}
+		}
+		.card-text-container{
+			display: flex;
+			flex-direction: column;
+			font-weight: 500;
+    	font-size: 14px;
+			.t1{
+				color: $global-text-color;
+			}
+			.t2{				
+				color: #2081e2;
+				&:hover{
+					color: #1868b7;
+				}
+			}
+		}
+	}
+}
