@@ -87,12 +87,18 @@
 		display: inline-flex;
 		justify-content: center;
 		align-items: center;
+		cursor: pointer;
 		.material-icons{
 			font-family: 'Material Icons Outlined';
 			color: #707a83;
 			text-rendering: optimizelegibility;
 			font-feature-settings: "liga";
 			font-size: 32px;
+		}
+		&:hover{
+			.material-icons{
+				color: #353840;
+			}
 		}
 	}	
 	.menu-btn{
