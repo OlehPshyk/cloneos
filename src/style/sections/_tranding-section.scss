@@ -1,0 +1,14 @@
+.tranding-section{
+	
+	.tranding-section-container{
+		padding: 60px $pad-x 100px;
+		.title{
+			font-weight: 600;
+			text-align: center;
+			font-size: 24px;
+			color: $global-text-color;
+			line-height: 1.1;
+			margin: 56px 0;
+		}
+	}
+}
