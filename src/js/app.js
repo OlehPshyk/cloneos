@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => { 
-  console.log("Start APP");
+  // console.log("Start APP");
 
   // var AudioSynth = require('audiosynth');
   // var AudioContext = window.AudioContext || window.webkitAudioContext;
