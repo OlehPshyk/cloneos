@@ -1,0 +1,204 @@
+.trending-section{
+	$trending-footer-height: 228px;
+	$trending-pad: 10px;
+	.trending-section-container{
+		padding: 60px $pad-x 100px;
+		.title{
+			font-weight: 600;
+			text-align: center;
+			font-size: 24px;
+			color: $global-text-color;
+			line-height: 1.1;
+			margin: 56px 0;
+		}
+	}
+
+	.trending-slider{
+		.slick-dots{
+			bottom: -32px;
+			li button:before{
+				color: #2081e2;
+			}			
+		}
+	}
+	.trending-item{
+		padding: $trending-pad;	
+		margin: 0 0 10px;	
+	}
+	.trending-link{
+		display: flex;
+		flex-direction: column;		
+    transition: all 0.1s ease 0s;			
+		border: 1px solid #e5e8eb;
+    background-color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+		text-decoration: none;
+		&:hover{
+			box-shadow: rgba(4, 17, 29, 0.25) 0px 0px 8px 0px;			
+		}	
+	}	
+	.img-container{		
+		width: 100%;
+		height: 200px;
+		border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+		overflow: hidden;
+		.img{				
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: 50% 50%;
+		}
+	}
+	.trending-footer{
+		height: $trending-footer-height;
+		padding: 10px;
+		border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-top: -36px;
+
+		.trending-badge{
+			flex: 0 0 auto;	
+			border-radius: 50%;	
+			overflow: hidden;	
+			height: 50px;
+    	width: 50px;
+			background-color: #fbfdff;
+			border: 3px solid #fbfdff;
+			box-shadow: rgba(14, 14, 14, 0.6) 0px 0px 2px 0px;
+			margin-bottom: 8px;
+			.badge-img{
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				object-position: 50% 50%;
+				transition: opacity 400ms ease 0s;
+			}
+		}
+	
+		.trending-title{			
+			margin: 0;
+			display: flex;
+			align-items: center;
+			.trending-title-text{
+				color: $global-text-color;
+				font-weight: 600;
+				font-size: 16px;		
+				line-height: 1.5;		
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				text-align: center;
+				max-width: 200px;
+				margin-top: 2px;
+			}
+			.verif-icon{
+				margin: 0 4px;
+				display: block;
+				width: 19px;
+				height: 19px;
+				.VerifiedIcon--background{
+					fill: #2081e2;
+				}
+			}
+		}
+		.trending-label{
+			font-size: 12px;
+			line-height: 1.5;
+			min-height: 18px;
+			font-weight: 600;
+			color: #707a83;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			text-align: center;
+			max-width: 200px;
+			margin: 0;
+			.accent{
+				color: #2081e2;
+			}
+		}
+		.trending-text{
+			max-width: 80%;
+			margin: 20px 0px;
+			height: 66px;
+			overflow: hidden;
+			text-align: center;
+			display: -webkit-box;
+			-webkit-line-clamp: 3;
+			-webkit-box-orient: vertical;
+			font-weight: 400;
+			font-size: 16px;
+			line-height: 1.5;
+			color: #707a83;	
+		}
+		
+	}
+
+	.trending-slider-container{
+		position: relative;
+		margin: 0 auto;		
+		max-width: 360px;
+		@media screen and (min-width: 816px){
+			max-width: 800px;
+		}
+		@media screen and (min-width: 1200px){
+			max-width: 1240px;
+		}
+	}
+	.previous-trending-slick-btn,
+	.next-trending-slick-btn {
+		@include outline(0);
+		-webkit-tap-highlight-color: transparent;
+		display: none;
+		@media screen and (min-width: 816px){
+			display: flex;			
+		} 
+		z-index: 1;
+		.material-icons{
+			font-family: 'Material Icons';
+			text-rendering: optimizelegibility;
+			font-feature-settings: "liga";
+			font-size: 24px;	
+			color: #707a83;			
+		} 
+		&.slick-hidden{			
+			display: none;
+		}
+		width: 50px;
+		height: 50px;  
+		justify-content: center;
+		align-items: center;
+		background-color: #ffffff;
+		border: 1px solid #e5e8eb;
+		border-radius: 50%;    
+		cursor: pointer;
+		transition: all 0.2s ease 0s;
+    	box-shadow: rgba(4, 17, 29, 0.25) 0px 0px 8px 0px;
+		&:hover,&:focus{
+			.material-icons{
+				color: #353840;
+			}
+		}
+		&.slick-disabled{
+			opacity: 0.2;
+			cursor: auto;
+		}
+	}
+	.previous-trending-slick-btn {
+		position: absolute;	
+		bottom: calc( #{$trending-footer-height} - 14px );
+		left: 10px;
+		transform: translate(-50%, 50%);		
+	}
+	.next-trending-slick-btn {
+		position: absolute;		
+		bottom: calc( #{$trending-footer-height} - 14px );
+		right: 10px;
+		transform: translate(50%, 50%);
+	}
+}
