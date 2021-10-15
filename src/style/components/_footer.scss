@@ -9,10 +9,12 @@
   }
   // .footer-top{}
   .footer-top-container{
-    padding: 40px 0 ;
+    padding: 40px 0;
     @include breakpoint(xl){
       display: flex;
-    }    
+    }  
+    border-bottom: 1px solid rgba(229, 232, 235, 0.25);
+    margin-bottom: 20px;  
   }
   .f-form-part{
     @include breakpoint(lg-down){
@@ -106,4 +108,109 @@
       // object-position: 50% 50%;
     }
   }
+  // .footer-med{}
+  .footer-med-container{
+    padding: 40px 0;
+    @include breakpoint(xl){
+      display: flex;
+    }  
+    border-bottom: 1px solid rgba(229, 232, 235, 0.25);
+    margin-bottom: 20px;  
+  }
+  .f-logo-part{
+    flex: 1 1 25%;
+    .logo-box{
+      width: 44px;
+      height: 44px;
+      @include breakpoint(lg-down){
+        margin: 0 auto;
+      }
+      .f-logo{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: 50% 50%;
+      }
+    }
+    .m-link-box{
+      margin: 8px 0;
+      @include breakpoint(lg-down){
+        text-align: center;
+      }
+    }
+    .m-link{
+      color: #ffffff;
+      font-size: 20px;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .med-text{
+      font-size: 16px;
+      line-height: 1.5;
+      color: #fbfdff;
+      @include breakpoint(lg-down){
+        text-align: center;
+        margin-bottom: 20px;
+      }
+    }
+  }
+  .f-urls-part{
+    flex: 1 1 auto;
+    width: 100%;
+    @include breakpoint(xl){
+      width: 75%;
+      padding-left: 72px;
+    }
+  }
+  .m-list-grid{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    @include breakpoint(xl){
+      flex-wrap: nowrap;
+    }
+  }
+  .m-list{
+    display: flex;
+    flex-direction: column;  
+    margin: 0;
+    padding: 0;
+    list-style: none;  
+  }
+  .m-list-column{
+    padding-top: 20px;
+    margin-bottom: 16px;
+    width: 50%;
+    @media screen and (min-width: 815px) {
+      width: 20%;
+      padding: 0;
+      margin: 0;
+    }
+  }  
+  .m-list-title{
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 12px;
+    text-align: center;
+    @media screen and (min-width: 815px) {
+      text-align-last: left;
+    }
+  }
+  .m-list-item{
+    margin-bottom: 12px;
+    text-align: center;
+    @media screen and (min-width: 815px) {
+      text-align-last: left;
+    }
+  }
+  .m-list-link{
+    color: #fbfdff;
+    font-size: 14px;
+    margin-bottom: 12px;
+    text-decoration: none;    
+  }
+
+
 }
