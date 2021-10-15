@@ -52,3 +52,27 @@
 		color: #1868b7;
 	}
 }
+
+.sign-up-btn{
+	@include outline(0);
+	border: none;
+	padding: 0;
+	white-space: nowrap;
+	border-radius: 10px;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 16px;
+	font-weight: 600;
+	padding: 12px 20px;
+	background-color: #2081e2;
+	border: 1px solid #2081e2;
+	color: #ffffff;
+	transition: all 0.2s ease 0s;
+	cursor: pointer;
+	&:hover{
+		filter: brightness(1.1);
+    background-color: #2081e2;		
+    box-shadow: rgba(4, 17, 29, 0.25) 0px 0px 8px 0px;
+	}
+}
