@@ -24,6 +24,11 @@
       height: 100%;
       object-fit: contain;
       object-position: 50% 50%;
+      &:hover{
+        path{
+          fill: #fbfdff;
+        }
+      }
       path{
         fill: rgba(251, 253, 255, 0.75);
         &.square{
